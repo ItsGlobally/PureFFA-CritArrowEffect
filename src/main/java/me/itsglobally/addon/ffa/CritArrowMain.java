@@ -22,9 +22,9 @@ public class CritArrowMain implements EffectAddon {
 
     @Override
     public void onEnable() {
-        new CritSlimeShoot().registerArrowShootEffect(this);
+        new CritArrowShoot().registerArrowShootEffect(this);
     }
 
     @Override
-    public void onDisable() { new CritSlimeShoot().unregisterArrowShootEffect();}
+    public void onDisable() { new CritArrowShoot().unregisterArrowShootEffect();}
 }

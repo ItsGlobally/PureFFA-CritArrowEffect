@@ -8,10 +8,10 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-public class CritSlimeShoot extends PureArrowShootEffect {
+public class CritArrowShoot extends PureArrowShootEffect {
     @Override
     public void arrowShootEffect(Location location, Player player) {
-        location.getWorld().playEffect(location, Effect.SLIME, 0);
+        location.getWorld().playEffect(location, Effect.CRIT, 0);
     }
 
     @Override
