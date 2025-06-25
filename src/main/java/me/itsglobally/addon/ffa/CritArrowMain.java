@@ -2,10 +2,10 @@ package me.itsglobally.addon.ffa;
 
 import me.bedtwL.ffa.api.EffectAddon;
 
-public class SlimeArrowMain implements EffectAddon {
+public abstract class CritArrowMain implements EffectAddon {
     @Override
     public String getName() {
-        return "SlimeArrow";
+        return "CritArrow";
     }
 
     @Override
@@ -15,11 +15,9 @@ public class SlimeArrowMain implements EffectAddon {
 
     @Override
     public void onEnable() {
-        new ArrowSlimeShoot().registerArrowShootEffect();
+        new CritSlimeShoot().registerArrowShootEffect(this);
     }
 
     @Override
-    public void onDisable() {
-        new ArrowSlimeShoot().unregisterArrowShootEffect();
-    }
+    public void onDisable() { new CritSlimeShoot().unregisterArrowShootEffect();}
 }
